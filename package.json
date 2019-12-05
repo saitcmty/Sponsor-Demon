@@ -1,0 +1,24 @@
+{
+  "name": "sponsor-demon",
+  "version": "1.0.0",
+  "description": "Demon that sends emails to potential sponsors for SAITC.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saitcmty/Sponsor-Demon.git"
+  },
+  "keywords": [
+    "nodejs",
+    "sponsors",
+    "javascript"
+  ],
+  "author": "SAITC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saitcmty/Sponsor-Demon/issues"
+  },
+  "homepage": "https://github.com/saitcmty/Sponsor-Demon#readme"
+}
