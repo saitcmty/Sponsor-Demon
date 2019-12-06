@@ -23,7 +23,6 @@ app.use((req, res, next) => {
 
 // Code goes here
 
-
 let server;
 
 function runServer(port, databaseUrl) {
