@@ -1,5 +1,10 @@
+.main-title {
+	margin-left: 10%;
+	padding-top: 3%;
+}
+
 .main-container {
-	padding-top: 5%;
+	margin-top: 3%;
 	padding-left: 10%;
 	display: flex;
 }
@@ -13,12 +18,11 @@
 	margin-bottom: 5%;
 }
 
-.sign-in-input {
-	margin-bottom: 7%;
+.register-input {
+	margin-bottom: 9%;
 }
 
 .log-in {
 	width: 50%;
 	padding-right: 10%;
 }
-
