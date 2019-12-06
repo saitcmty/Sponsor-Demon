@@ -8,12 +8,12 @@ function register(newUser) {
 		dataType: "JSON",
 		contentType: "application/json",
 
-		success: function() {
+		success: function(responseJSON) {
 			console.log("A huevo");
 		},
 
-		error: function() {
-			console.log("Juguito de Chale");
+		error: function(error) {
+			console.log("Juguito de Chale", error);
 		}
 	});
 }
