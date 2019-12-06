@@ -2,14 +2,14 @@ function register(newUser) {
 
 	$.ajax({
 
-		url: "/products", 
+		url: "/users", 
 		method: "POST",
 		data: JSON.stringify(newUser),
 		dataType: "JSON",
 		contentType: "application/json",
 
 		success: function() {
-			
+			console.log("A huevo");
 		},
 
 		error: function() {
@@ -31,7 +31,9 @@ function watchForm() {
 				id: "",
 				name: $("#sign-in-name").val(),
 				email: $("#sign-in-mail").val(),
-				password: $("#sign-in-password").val()
+				password: $("#sign-in-password").val(),
+				logged: false,
+				admin: false
 			};
 
 			register(newUser);

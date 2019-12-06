@@ -21,7 +21,39 @@ app.use((req, res, next) => {
 	next();
 });
 
-// Code goes here
+// GET
+app.get('/users', (req, res, next) => {
+
+	Users.get().then(User => {
+		return res.status(200).json(User);
+	}).catch(error => {
+		return res.status(500).json({
+			status : 500,
+			message : "Something went wrong"
+		});
+	});	
+});
+
+app.post('/users', jsonParser, (req, res, next) => {
+
+	let createdUser = {
+		id 						:		uuid.v4(),
+		name 					:		req.body.name,
+		email 				:		req.body.email,
+		password 			:		req.body.password,
+		logged				: 	false,
+		admin					: 	true
+	};
+
+	Users.post(createdUser).then(user => {
+		return res.status(201).json(user);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with the DB",
+			status: 500
+		});
+	});
+});
 
 let server;
 

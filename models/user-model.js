@@ -9,6 +9,7 @@ let userSchema = mongoose.Schema ({
 	email 				:		{type: String, require: true},
 	password 			:		{type: String, require: true},
 	logged				: 	{type: Boolean, require: false},
+	admin					: 	{type: Boolean, require: false}
 });
 
 let User = mongoose.model('users', userSchema);
