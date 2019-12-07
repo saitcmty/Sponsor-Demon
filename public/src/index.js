@@ -1,3 +1,35 @@
+function logUser(user) {
+
+}
+
+function getUser(logUser) {
+
+	$.ajax({
+		
+		url: `/users`,
+		method: "GET",
+		dataType: "JSON",
+		contentType: "application/json",
+
+		success: function(responseJSON) {
+			for (let i=0; i<responseJSON.lenght; i++) {
+				if (responseJSON[i].email == logUser.email) {
+					if (responseJSON[i].password == logUser.password) {
+						logUser(responseJSON[i]);
+					}
+					else {
+						alert("No se pudo iniciar sesion");
+					}
+				}	
+			}
+		},
+
+		error: function(error) {
+			console.log("Chale", error)
+		}
+	});
+}
+
 function register(newUser) {
 
 	$.ajax({
@@ -34,9 +66,7 @@ function watchForm() {
 				password: $("#sign-in-password").val(),
 				logged: false,
 				admin: false,
-				test: true
 			};
-
 			register(newUser);
 		}
 	});
@@ -44,8 +74,11 @@ function watchForm() {
 	$("#log-in-btn").on("click", function() {
 		
 		let logUser = {
-
+			email: $("#sign-in-mail").val(),
+			password: $("#sign-in-password").val()
 		};
+
+		getUser(logUser);
 	});
 }
 watchForm();

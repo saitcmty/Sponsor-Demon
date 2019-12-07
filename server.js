@@ -21,7 +21,6 @@ app.use((req, res, next) => {
 	next();
 });
 
-// GET
 app.get('/users', (req, res, next) => {
 
 	Users.get().then(User => {
@@ -43,7 +42,6 @@ app.post('/users', jsonParser, (req, res, next) => {
 		password 			:		req.body.password,
 		logged				: 	false,
 		admin					: 	false,
-		test 					: 	true
 	};
 
 	Users.post(createdUser).then(user => {
