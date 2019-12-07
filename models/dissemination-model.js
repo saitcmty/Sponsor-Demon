@@ -3,8 +3,10 @@ let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 let disseminationSchema = mongoose.Schema({
+	
 	id					: 		{type: String, require: true},
 	name				: 		{type: String, require: true},
+	creator			: 		{type: String, require: true}, 		
 	message			: 		{type: String, require: false},
 	companys		: 		{type: [String], require: false},
 	ambassador	: 		{type: [String], require: false},
@@ -48,4 +50,4 @@ let Disseminations = {
 	}
 };
 
-module.exports = {Disseminations}
+module.exports = {Disseminations};

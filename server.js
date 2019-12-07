@@ -9,6 +9,7 @@ let jsonParser = bodyParser.json();
 mongoose.Promise = global.Promise;
 
 let {Users} = require('./models/user-model');
+let {Disseminations} = require('./models/dissemination-model');
 
 let {DATABASE_URL, PORT} = require('./config');
 
@@ -49,6 +50,53 @@ app.post('/users', jsonParser, (req, res, next) => {
 	}).catch(error => {
 		return res.status(500).json({
 			message: "Something went wrong with the DB",
+			status: 500
+		});
+	});
+});
+
+app.get('/dissemination', jsonParser, (req, res, next) => {
+
+	Disseminations.get().then(dissemination => {
+		return res.status(200).json(dissemination);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with the DB",
+			status: 500;
+		});
+	});
+});
+
+app.post('/disseminations', jsonParser, (req, res, next) => {
+
+	let createdDissemination = {
+
+		id 						:		uuid.v4(),
+		name 					: 	req.body.name,
+		creator				: 	req.body.creator,
+		message 			: 	req.body.message,
+		companys 			: 	req.body.companys,
+		ambassador 		: 	req.body.ambassador,
+		stuff					: 	req.body.stuff
+	};
+
+	Disseminations.post(createdDissemination).then(dissemination => {
+		return res.status(201).json(dissemination);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with the DB",
+			status: 200
+		});
+	});
+});
+
+app.put('/dissemination/:id', jsonParser, (req, res, next) => {
+	
+	Disseminations.update(req.body).then(dissemination => {
+		return res.status(202).json(dissemination);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with DB",
 			status: 500
 		});
 	});
