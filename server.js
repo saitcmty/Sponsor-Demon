@@ -90,10 +90,22 @@ app.post('/disseminations', jsonParser, (req, res, next) => {
 	});
 });
 
-app.put('/dissemination/:id', jsonParser, (req, res, next) => {
+app.put('/disseminations/:id', jsonParser, (req, res, next) => {
 	
 	Disseminations.update(req.body).then(dissemination => {
 		return res.status(202).json(dissemination);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with DB",
+			status: 500
+		});
+	});
+});
+
+app.delete('/disseminations/:id', jsonParser, (req, res, next) => {
+
+	Disseminations.delete(req.params.id).then(dissemination => {
+		return res.status(201).json(dissemination);
 	}).catch(error => {
 		return res.status(500).json({
 			message: "Something went wrong with DB",
