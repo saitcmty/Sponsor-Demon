@@ -1,5 +1,5 @@
 function logUser(user) {
-
+	console.log(user);
 }
 
 function getUser(logUser) {
