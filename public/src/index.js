@@ -33,7 +33,8 @@ function watchForm() {
 				email: $("#sign-in-mail").val(),
 				password: $("#sign-in-password").val(),
 				logged: false,
-				admin: false
+				admin: false,
+				test: true
 			};
 
 			register(newUser);

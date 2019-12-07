@@ -42,7 +42,8 @@ app.post('/users', jsonParser, (req, res, next) => {
 		email 				:		req.body.email,
 		password 			:		req.body.password,
 		logged				: 	false,
-		admin					: 	true
+		admin					: 	false,
+		test 					: 	true
 	};
 
 	Users.post(createdUser).then(user => {
