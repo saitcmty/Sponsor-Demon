@@ -1,0 +1,33 @@
+.main-content {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.new-dissemination-title {
+	/*text-align: center;	*/
+}
+
+.new-list-name {
+	font-size: 120%;
+	margin-top: 4%;
+	text-align: left;
+}
+
+.new-dissemination-input {
+	margin-right: 20%;
+}
+
+.mandatory {
+	color: red;
+	font-weight: bold;
+}
+
+.content {
+	margin-top: 3%;
+}
+
+.create-new-list {
+	margin-top: 5%;
+}
