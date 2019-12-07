@@ -1,9 +1,9 @@
-let mongoose = require( "mongoose" );
-let express = require( "express" );
-let morgan = require( "morgan" );
+let mongoose = require("mongoose");
+let express = require("express");
+let morgan = require("morgan");
 let uuid = require("uuid");
 
-let bodyParser = require( "body-parser" );
+let bodyParser = require("body-parser");
 let jsonParser = bodyParser.json();
 
 mongoose.Promise = global.Promise;
