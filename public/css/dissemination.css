@@ -3,3 +3,9 @@
 	margin-right: 10%;
 	margin-top: 5%;
 }
+
+.buttons-table {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 20%;
+}
