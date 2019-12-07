@@ -1,22 +1,13 @@
 .main-content {
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-top: 5%;
-	margin-bottom: 10%;
-}
-
-.new-dissemination-title {
-	/*text-align: center;	*/
+	margin-top: 3%;
 }
 
 .new-list-name {
 	font-size: 120%;
-	margin-top: 4%;
+	margin-top: 1.5%;
 	text-align: left;
-}
-
-.new-dissemination-input {
-	margin-right: 20%;
 }
 
 .mandatory {
@@ -29,5 +20,5 @@
 }
 
 .create-new-list {
-	margin-top: 5%;
+	margin-top: 3%;
 }
