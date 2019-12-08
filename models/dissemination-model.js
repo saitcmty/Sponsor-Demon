@@ -10,7 +10,7 @@ let disseminationSchema = mongoose.Schema({
 	message			: 		{type: String, require: false},
 	companys		: 		{type: [String], require: false},
 	ambassador	: 		{type: [String], require: false},
-	stuff				: 		{type: [String], require: false}
+	stuff				: 		{type: String, require: false}
 });
 
 let Dissemination = mongoose.model('disseminations', disseminationSchema);

@@ -55,7 +55,7 @@ app.post('/users', jsonParser, (req, res, next) => {
 	});
 });
 
-app.get('/dissemination', jsonParser, (req, res, next) => {
+app.get('/disseminations', jsonParser, (req, res, next) => {
 
 	Disseminations.get().then(dissemination => {
 		return res.status(200).json(dissemination);

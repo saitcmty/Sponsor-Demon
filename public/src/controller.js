@@ -1,0 +1,1 @@
+let idLoggedUser = '1';
