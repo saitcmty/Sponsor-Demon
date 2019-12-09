@@ -8,8 +8,8 @@ let disseminationSchema = mongoose.Schema({
 	name				: 		{type: String, require: true},
 	creator			: 		{type: String, require: true}, 		
 	message			: 		{type: String, require: false},
-	companys		: 		{type: [String], require: false},
-	ambassador	: 		{type: [String], require: false},
+	// companys		: 		{type: [String], require: false},
+	// ambassador	: 		{type: [String], require: false},
 	stuff				: 		{type: String, require: false}
 });
 
