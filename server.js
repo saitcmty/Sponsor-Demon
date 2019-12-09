@@ -56,17 +56,17 @@ app.post('/users', jsonParser, (req, res, next) => {
 	});
 });
 
-app.get('/disseminations', jsonParser, (req, res, next) => {
+// app.get('/disseminations', jsonParser, (req, res, next) => {
 
-	Disseminations.get().then(dissemination => {
-		return res.status(200).json(dissemination);
-	}).catch(error => {
-		return res.status(500).json({
-			message: "Something went wrong with the DB",
-			status: 500;
-		});
-	});
-});
+// 	Disseminations.get().then(dissemination => {
+// 		return res.status(200).json(dissemination);
+// 	}).catch(error => {
+// 		return res.status(500).json({
+// 			message: "Something went wrong with the DB",
+// 			status: 500;
+// 		});
+// 	});
+// });
 
 // app.post('/disseminations', jsonParser, (req, res, next) => {
 
