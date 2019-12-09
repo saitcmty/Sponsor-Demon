@@ -68,28 +68,28 @@ app.get('/disseminations', jsonParser, (req, res, next) => {
 	});
 });
 
-// app.post('/disseminations', jsonParser, (req, res, next) => {
+app.post('/disseminations', jsonParser, (req, res, next) => {
 
-// 	let createdDissemination = {
+	let createdDissemination = {
 
-// 		id 						:		uuid.v4(),
-// 		name 					: 	req.body.name,
-// 		creator				: 	req.body.creator,
-// 		message 			: 	req.body.message,
-// 		companys 			: 	req.body.companys,
-// 		ambassador 		: 	req.body.ambassador,
-// 		stuff					: 	req.body.stuff
-// 	};
+		id 						:		uuid.v4(),
+		name 					: 	req.body.name,
+		creator				: 	req.body.creator,
+		message 			: 	req.body.message,
+		// companys 			: 	req.body.companys,
+		// ambassador 		: 	req.body.ambassador,
+		stuff					: 	req.body.stuff
+	};
 
-// 	Disseminations.post(createdDissemination).then(dissemination => {
-// 		return res.status(201).json(dissemination);
-// 	}).catch(error => {
-// 		return res.status(500).json({
-// 			message: "Something went wrong with the DB",
-// 			status: 200
-// 		});
-// 	});
-// });
+	Disseminations.post(createdDissemination).then(dissemination => {
+		return res.status(201).json(dissemination);
+	}).catch(error => {
+		return res.status(500).json({
+			message: "Something went wrong with the DB",
+			status: 200
+		});
+	});
+});
 
 // app.put('/disseminations/:id', jsonParser, (req, res, next) => {
 	
