@@ -16,7 +16,7 @@ let userSchema = mongoose.Schema ({
 let User = mongoose.model('users', userSchema);
 
 let Users = {
-	
+
 	get: function(){
 		return User.find().then(users => {
 			return users;

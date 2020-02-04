@@ -32,7 +32,7 @@ app.get('/users', (req, res, next) => {
 			status : 500,
 			message : "Something went wrong"
 		});
-	});	
+	});
 });
 
 app.post('/users', jsonParser, (req, res, next) => {
@@ -92,7 +92,7 @@ app.post('/disseminations', jsonParser, (req, res, next) => {
 });
 
 // app.put('/disseminations/:id', jsonParser, (req, res, next) => {
-	
+
 // 	Disseminations.update(req.body).then(dissemination => {
 // 		return res.status(202).json(dissemination);
 // 	}).catch(error => {
@@ -119,20 +119,20 @@ let server;
 
 function runServer(port, databaseUrl) {
 	return new Promise((resolve, reject) => {
-		
+
 		mongoose.connect(databaseUrl, response => {
-			
+
 			if (response) {
 				return reject(response);
 			}
 
 			else {
-				
+
 				server = app.listen(port, () => {
 					console.log("App is running on port " + port);
 					resolve();
 				})
-				
+
 				.on('error', err => {
 					mongoose.disconnect();
 					return reject(err);
