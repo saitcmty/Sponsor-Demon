@@ -1,4 +1,5 @@
 let mongoose = require("mongoose");
+var cryptojs = require("crypto-js");
 let bcrypt = require("bcryptjs");
 let express = require("express");
 let morgan = require("morgan");
