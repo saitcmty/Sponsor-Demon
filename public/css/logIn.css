@@ -1,0 +1,29 @@
+.main-title {
+	margin-left: 10%;
+	padding-top: 3%;
+}
+
+.main-container {
+	margin-top: 3%;
+	padding-left: 10%;
+	display: flex;
+	margin-bottom: 2%;
+}
+
+.sign-in {
+	width: 50%;
+	padding-right: 10%;
+}
+
+.title {
+	margin-bottom: 5%;
+}
+
+.register-input {
+	margin-bottom: 9%;
+}
+
+.log-in {
+	width: 50%;
+	padding-right: 10%;
+}
