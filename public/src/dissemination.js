@@ -1,1 +1,3 @@
-console.log("Hey!");
+function watchForm() {
+	
+} watchForm();
