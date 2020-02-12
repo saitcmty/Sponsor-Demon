@@ -1,8 +1,19 @@
 .main {
 	text-align: center;
 	margin: 10%;
+	padding-top: 4%;
 }
 
-.password {
-	padding-bottom: 2%;
+.magic-container {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+}
+
+#magic-words {
+	text-align: center;
+}
+
+.btn-next {
+	margin-top: 4%;
 }
